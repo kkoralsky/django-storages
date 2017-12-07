@@ -11,6 +11,7 @@ except ImportError:
     def deconstructible(func):
         return func
 
+
 def setting(name, default=None, strict=False):
     """
     Helper function to get a Django setting by name. If setting doesn't exists
