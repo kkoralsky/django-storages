@@ -8,7 +8,6 @@ from tempfile import SpooledTemporaryFile
 from django.core.exceptions import ImproperlyConfigured, SuspiciousOperation
 from django.core.files.base import File
 from django.core.files.storage import Storage
-from django.utils.deconstruct import deconstructible
 from django.utils.encoding import (
     filepath_to_uri, force_bytes, force_text, smart_text,
 )
@@ -16,7 +15,7 @@ from django.utils.six import BytesIO
 from django.utils.six.moves.urllib import parse as urlparse
 from django.utils.timezone import is_naive, localtime
 
-from storages.utils import safe_join, setting
+from storages.utils import safe_join, setting, deconstructible
 
 try:
     import boto3.session

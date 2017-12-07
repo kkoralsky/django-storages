@@ -18,12 +18,12 @@ from django.core.exceptions import ImproperlyConfigured
 from django.core.files.base import File
 from django.core.files.storage import Storage
 from django.utils._os import safe_join
-from django.utils.deconstruct import deconstructible
+
 from dropbox import Dropbox
 from dropbox.exceptions import ApiError
 from dropbox.files import CommitInfo, UploadSessionCursor
 
-from storages.utils import setting
+from storages.utils import setting, deconstructible
 
 DATE_FORMAT = '%a, %d %b %Y %X +0000'
 

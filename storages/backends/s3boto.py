@@ -8,13 +8,12 @@ from django.core.exceptions import ImproperlyConfigured, SuspiciousOperation
 from django.core.files.base import File
 from django.core.files.storage import Storage
 from django.utils import timezone as tz
-from django.utils.deconstruct import deconstructible
 from django.utils.encoding import (
     filepath_to_uri, force_bytes, force_text, smart_str,
 )
 from django.utils.six import BytesIO
 
-from storages.utils import clean_name, safe_join, setting
+from storages.utils import clean_name, safe_join, setting, deconstructible
 
 try:
     from boto import __version__ as boto_version

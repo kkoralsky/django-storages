@@ -1,11 +1,10 @@
 import warnings
 
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.deconstruct import deconstructible
 from django.utils.six import BytesIO
 
 from storages.backends.s3boto import S3BotoStorage, S3BotoStorageFile
-from storages.utils import setting
+from storages.utils import setting, deconstructible
 
 try:
     from boto.gs.connection import GSConnection, SubdomainCallingFormat

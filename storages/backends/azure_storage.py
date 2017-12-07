@@ -7,9 +7,8 @@ from time import mktime
 from django.core.exceptions import ImproperlyConfigured
 from django.core.files.base import ContentFile
 from django.core.files.storage import Storage
-from django.utils.deconstruct import deconstructible
 
-from storages.utils import setting
+from storages.utils import setting, deconstructible
 
 try:
     import azure  # noqa

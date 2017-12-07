@@ -5,10 +5,9 @@ from django.core.exceptions import ImproperlyConfigured
 from django.core.files.base import File
 from django.core.files.storage import Storage
 from django.utils import timezone
-from django.utils.deconstruct import deconstructible
 from django.utils.encoding import force_bytes, smart_str
 
-from storages.utils import clean_name, safe_join, setting
+from storages.utils import clean_name, safe_join, setting, deconstructible
 
 try:
     from google.cloud.storage.client import Client
